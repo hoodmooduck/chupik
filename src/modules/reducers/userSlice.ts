@@ -2,7 +2,7 @@ import {UserType} from "../types/userType.ts";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface User {
-    users: UserType[] ,
+    users: UserType[],
     isLoading: boolean,
     error: string,
 }

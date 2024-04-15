@@ -20,11 +20,11 @@ const DossierPage = () => {
     }, []);
 
     if (user !== null)
-    return (
-        <div>
-            <Dossier user={user}></Dossier>
-        </div>
-    )
+        return (
+            <div>
+                <Dossier user={user}></Dossier>
+            </div>
+        )
 }
 
 export default DossierPage

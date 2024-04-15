@@ -11,8 +11,6 @@ function MainPage() {
     const { users } = useAppSelector((state) => state.users)
     const { data: data, isFetching } = UserApi.useFetchUserQuery({ page: page });
 
-
-
     useEffect(() => {
         if (data) {
             dispatch(addUsers(data));
@@ -27,16 +25,17 @@ function MainPage() {
                 setPage((prevPage) => prevPage + 1);
             }, 1500)
             //задержка чтобы при быстром скролле не нагуржать апишку чтобы не приходил 429 код
+            //хотя он всё равно приходит время от времени
         }
     };
 
     return (
         <main onScroll={handleScroll} className="App">
+            {isFetching && <p>Загрузка...</p>}
             {users &&
                 users.map((user: UserType, idx: number) => (
                     <Card props={user} key={idx} />
                 ))}
-            {isFetching && <p>Загрузка...</p>}
         </main>
     );
 }
