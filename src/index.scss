@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --white: #fff;
+  --blue: #0067a5;
+  --dark-blue: #00202e;
+  --dark-blue-25: rgba(0, 32, 46, 0.25);
+  --gray: #4e4e4e;
+  --red: #ff5050;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+
+  &:active, &:focus {
+    outline: none;
+    border: 0;
+  }
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: 0;
+
+  &:focus-visible {
+    border: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  .card:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+
+main {
+  overflow: auto;
+  height: 100vh;
+}

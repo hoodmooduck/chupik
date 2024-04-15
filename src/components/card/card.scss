@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  align-items: center;
+  border: 5px dashed var(--dark-blue-25);
+  transition: .3s;
+
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    border: 5px dashed var(--blue);
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    min-height: 300px;
+    height: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 48px;
+
+    p{
+      font-size: 18px;
+
+      span{
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

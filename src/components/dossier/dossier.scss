@@ -1,0 +1,44 @@
+.dossier {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 52px; //52 52 52 52
+    line-height: 100%;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    border: 5px solid var(--blue);
+    margin: 40px 0;
+  }
+
+  &__compose {
+    width: 100%;
+    margin-bottom: 20px;
+    height: max-content;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      height: max-content;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p, li{
+      padding: 10px;
+      border: 1px solid
+    }
+  }
+}
